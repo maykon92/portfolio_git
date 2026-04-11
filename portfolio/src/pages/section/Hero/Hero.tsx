@@ -1,74 +1,121 @@
-import { Box, Container, Grid, Typography, styled } from "@mui/material"
-import Avatar from "../../../assets/images/perfil02.jpeg"
-import DownloadIcon from '@mui/icons-material/Download';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import StyledButton from "../../../components/StyledButton/StyledButton";
+import { Box, Container, Grid, Typography, styled, Button } from "@mui/material";
+import Avatar from "../../../assets/images/portfolio_02-removebg-preview.png";
+import DownloadIcon from "@mui/icons-material/Download";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { AnimatedBackground } from "../../../components/AnimatedBackGround/AnimatedBackGround";
 
 const Hero = () => {
+  const StyledHero = styled("div")(({ theme }) => ({
+    backgroundColor: theme.palette.primary.main,
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    overflow: "hidden",
+    [theme.breakpoints.up("xs")]: {
+      paddingTop: "160px",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "0",
+    },
+  }));
 
-    const StyledHero = styled("div")(({ theme }) => ({
-        backgroundColor: theme.palette.primary.main,
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        [theme.breakpoints.up('xs')]: { // <= mobile
-            paddingTop: "160px",
+  const StyledImg = styled("img")(() => ({
+    width: "65%",
+  }));
 
-        },
-        [theme.breakpoints.up('md')]: { // >=mobile
-            paddingTop: "0",
-        }
-    }))
+  return (
+    <StyledHero>
+      <Container maxWidth="lg">
+        <Grid container spacing={2}>
+          {/* IMAGE */}
+          <Grid item xs={12} md={4}>
+            <Box position="relative" sx={{ overflow: "hidden" }}>
+              <Box position="absolute" width="150%" top={-100} right={0}>
+                <AnimatedBackground />
+              </Box>
 
-    const StyledImg = styled("img")(({ theme }) => ({
-        width: "75%",
-        borderRadius: "50%",
-        border: `1px solid ${theme.palette.primary.contrastText}`
-    }))
+              <Box position="relative" textAlign="center">
+                <StyledImg src={Avatar} />
+              </Box>
+            </Box>
+          </Grid>
 
-    return (
-        <>
-            <StyledHero>
-                <Container maxWidth="lg">
-                    <Grid container spacing={2}>
-                        <Grid item xs={12} md={5}>
-                            <Box position="relative">
-                                <Box position="absolute" width={"150%"} top={-100} right={0}>
-                                    < AnimatedBackground/>
-                                </Box>
-                                <Box position="relative" textAlign="center">
-                                    <StyledImg src={Avatar} />
-                                </Box>
-                            </Box>
-                        </Grid>
-                        <Grid item xs={12} md={7}>
-                            <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Maykon Da Luz</Typography>
-                            <Typography color="primary.contrastText" variant="h2" textAlign="center" >I'm a Web Developer</Typography>
-                            <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
-                                <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton onClick={() => console.log("Download")}>
-                                        <DownloadIcon />
-                                        <Typography>
-                                            Download CV
-                                        </Typography>
-                                    </StyledButton>
-                                </Grid>
-                                <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton onClick={() => console.log("Contact me")}>
-                                        <MailOutlineIcon />
-                                        <Typography>
-                                            Contact me
-                                        </Typography>
-                                    </StyledButton>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Container>
-            </StyledHero>
-        </>
-    )
-}
+          {/* TEXT */}
+          <Grid
+            item
+            xs={12}
+            md={8}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+          >
+            <Typography
+              color="primary.contrastText"
+              variant="h1"
+              textAlign="center"
+              pb={2}
+            >
+              Maykon Da Luz
+            </Typography>
 
-export default Hero
+            <Typography
+              color="primary.contrastText"
+              variant="h4"
+              textAlign="center"
+            >
+              Building Web Applications & Cyber Security Solutions
+            </Typography>
+
+            {/* BUTTONS */}
+            <Grid container justifyContent="center" spacing={3} pt={3}>
+              {/* DOWNLOAD CV */}
+              <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                <Button
+                  variant="outlined"
+                  startIcon={<DownloadIcon />}
+                  component="a"
+                  href="/Maykon_Da_Luz_CV.pdf"
+                  download
+                  sx={{
+                    width: "100%",
+                    maxWidth: 220,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1,
+                    py: 2,
+                  }}
+                >
+                  <Typography>Download CV</Typography>
+                </Button>
+              </Grid>
+
+              {/* CONTACT */}
+              <Grid item xs={12} md={4} display="flex" justifyContent="center">
+                <Button
+                  variant="outlined"
+                  startIcon={<MailOutlineIcon />}
+                  component="a"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=maykon92@hotmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    width: "100%",
+                    maxWidth: 220,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 1,
+                    py: 2,
+                  }}
+                >
+                  <Typography>Contact me</Typography>
+                </Button>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+    </StyledHero>
+  );
+};
+
+export default Hero;
