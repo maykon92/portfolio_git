@@ -23,7 +23,7 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import CloseIcon from "@mui/icons-material/Close";
 
 import schedule1 from "../../../assets/schedule/schedule_01.png";
-import portfolio1 from "../../../assets/portfolio/portfolio_1.png";
+import portfolio1 from "../../../assets/portfolio/my_porfolio.png";
 import movies_lib from "../../../assets/movies_library/movies_lib.png";
 import chrome_loot from "../../../assets/chrome_loot_project/chrome_data_01.png";
 import dns_spoofer from "../../../assets/dns_spoofing_lab/dns_spoofer_01.png";
