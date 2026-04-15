@@ -35,6 +35,7 @@ import movies_lib_video from "../../../assets/movies_library/movies_lib_video.mp
 import chrome_dark_video from "../../../assets/chrome_loot_project/chrome_dark_theme.mp4";
 import secret_word_video from "../../../assets/secret_word/secret_word_video.mp4";
 import pentest_toolkit_video from "../../../assets/pentest_toolkit/pentest_toolkit_video.mp4";
+import dns_spoofer_project_video from "../../../assets/dns_spoofing_lab/dns_spoofer_project.mp4";
 
 type Project = {
   id: number;
@@ -122,7 +123,7 @@ export default function Projects() {
         techs: ["Python", "Flask", "Kali Linux", "Networking"],
         image: dns_spoofer,
         github: "https://github.com/maykon92/dns_spoofer_project",
-        video: "https://www.youtube.com/watch?v=pf3KyEnacJ8",
+        video: dns_spoofer_project_video,
       },
       {
         id: 6,
