@@ -21,6 +21,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import CloseIcon from "@mui/icons-material/Close";
+import LinkIcon from "@mui/icons-material/Link";
 
 import schedule1 from "../../../assets/schedule/schedule_01.png";
 import portfolio1 from "../../../assets/portfolio/my_porfolio.png";
@@ -48,6 +49,7 @@ type Project = {
   github?: string;
   demo?: string;
   video?: string;
+  link?: string;
 };
 
 export default function Projects() {
@@ -85,6 +87,7 @@ export default function Projects() {
         image: schedule1,
         github: "https://github.com/maykon92/schedule",
         video: schedule_video,
+        link: "https://schedule-silk-beta.vercel.app/",
       },
       {
         id: 3,
@@ -98,6 +101,7 @@ export default function Projects() {
         image: movies_lib,
         github: "https://github.com/maykon92/movies_lib",
         video: movies_lib_video,
+        link: "https://movies-lib-roan-alpha.vercel.app/",
       },
       {
         id: 4,
@@ -110,7 +114,8 @@ export default function Projects() {
         techs: ["React", "JavaScript", "CSS", "State Management"],
         image: secret_word, 
         github: "https://github.com/maykon92/Secret-Words.git", 
-        video: secret_word_video
+        video: secret_word_video,
+        link: "https://secret-words-psi.vercel.app/",
       },
       {
         id: 5,
@@ -524,6 +529,27 @@ export default function Projects() {
                   rel="noopener noreferrer"
                 >
                   Open Demo
+                </Button>
+              )}
+
+              {selectedProject.link && (
+                <Button
+                  startIcon={<LinkIcon />}
+                  component="a"
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outlined"
+                  sx={{
+                    color: "#fff",
+                    borderColor: "rgba(255,255,255,0.22)",
+                    "&:hover": {
+                      borderColor: "rgba(255,255,255,0.4)",
+                      backgroundColor: "rgba(255,255,255,0.06)",
+                    },
+                  }}
+                >
+                  Visit Website
                 </Button>
               )}
 
