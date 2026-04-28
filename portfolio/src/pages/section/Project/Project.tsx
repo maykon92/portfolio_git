@@ -23,13 +23,14 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import CloseIcon from "@mui/icons-material/Close";
 import LinkIcon from "@mui/icons-material/Link";
 
-import schedule1 from "../../../assets/schedule/schedule_01.png";
-import portfolio1 from "../../../assets/portfolio/my_porfolio.png";
-import movies_lib from "../../../assets/movies_library/movies_lib.png";
-import chrome_loot from "../../../assets/chrome_loot_project/chrome_data_01.png";
-import dns_spoofer from "../../../assets/dns_spoofing_lab/dns_spoofer_01.png";
+import schedule1 from "../../../assets/schedule/schedule.png";
+import portfolio1 from "../../../assets/portfolio/portfolio.png";
+import movies_lib from "../../../assets/movies_library/movies_library.png";
+import chrome_loot from "../../../assets/chrome_loot_project/chrome_loot_project.png";
+import dns_spoofer from "../../../assets/dns_spoofing_lab/dns_spoofing_lab.png";
 import secret_word from "../../../assets/secret_word/secret_word.png";
 import pentest_toolkit from "../../../assets/pentest_toolkit/pentest_toolkit.png";
+import shell_reverse_dll from "../../../assets/shell_reverse_dll/shell_reverse_dll.png";
 
 import schedule_video from "../../../assets/schedule/schedule.mp4";
 import movies_lib_video from "../../../assets/movies_library/movies_lib_video.mp4";
@@ -37,6 +38,7 @@ import chrome_dark_video from "../../../assets/chrome_loot_project/chrome_dark_t
 import secret_word_video from "../../../assets/secret_word/secret_word_video.mp4";
 import pentest_toolkit_video from "../../../assets/pentest_toolkit/pentest_toolkit_video.mp4";
 import dns_spoofer_project_video from "../../../assets/dns_spoofing_lab/dns_spoofer_project.mp4";
+// import shell_reverse_dll_video from "../../../assets/shell_reverse_dll/shell_reverse_dll_video.mp4";
 
 type Project = {
   id: number;
@@ -155,6 +157,30 @@ export default function Projects() {
         image: pentest_toolkit,
         github: "https://github.com/maykon92/pentest_toolkit/",
         video: pentest_toolkit_video,
+      },
+      {
+        id: 8,
+        title: "Shell Reverse DLL",
+        category: "Cyber Security",
+        description:
+          "A complete post-exploitation Command & Control (C2) framework for Windows environments, featuring a reverse shell DLL payload, an encrypted agent, and a real-time web dashboard for multi-session management.",
+        longDescription:
+          "This framework enables authorized security professionals to assess Windows environments through a custom reverse shell DLL payload. How it works: The DLL, compiled with MinGW-w64, connects back to a Flask-based C2 server when executed on a Windows machine. The operator controls all compromised hosts through an intuitive web dashboard. Purpose: Exclusively for authorized penetration testing, red team exercises, and cybersecurity education. Not intended for illegal use.",
+        techs: [
+          "C",
+          "Python",
+          "HTML/CSS/JS",
+          "Flask",
+          "SQLite",
+          "WinSock2",
+          "RSA",
+          "AES-256",
+          "MinGW-w64",
+          "PyInstaller"
+        ],
+        image: shell_reverse_dll,
+        github: "https://github.com/maykon92/shell_reverse_dll",
+        // video: shell_reverse_dll_video,
       },
     ],
     []

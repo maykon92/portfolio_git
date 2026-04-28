@@ -3,8 +3,10 @@ import Avatar from "../../../assets/images/portfolio_02-removebg-preview_01.png"
 import DownloadIcon from "@mui/icons-material/Download";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { AnimatedBackground } from "../../../components/AnimatedBackGround/AnimatedBackGround";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     minHeight: "100vh",
@@ -93,11 +95,8 @@ const Hero = () => {
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
                 <Button
                   variant="outlined"
+                  onClick={() => navigate("/contact")}
                   startIcon={<MailOutlineIcon />}
-                  component="a"
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=maykon92@hotmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   sx={{
                     width: "100%",
                     maxWidth: 220,
