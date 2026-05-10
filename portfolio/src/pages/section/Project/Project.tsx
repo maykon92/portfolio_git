@@ -31,6 +31,7 @@ import dns_spoofer from "../../../assets/dns_spoofing_lab/dns_spoofing_lab.png";
 import secret_word from "../../../assets/secret_word/secret_word.png";
 import pentest_toolkit from "../../../assets/pentest_toolkit/pentest_toolkit.png";
 import shell_reverse_dll from "../../../assets/shell_reverse_dll/shell_reverse_dll.png";
+import orbit_planner from "../../../assets/orbit_planner/orbit_planner.png";
 
 import schedule_video from "../../../assets/schedule/schedule.mp4";
 import movies_lib_video from "../../../assets/movies_library/movies_lib_video.mp4";
@@ -39,6 +40,7 @@ import secret_word_video from "../../../assets/secret_word/secret_word_video.mp4
 import pentest_toolkit_video from "../../../assets/pentest_toolkit/pentest_toolkit_video.mp4";
 import dns_spoofer_project_video from "../../../assets/dns_spoofing_lab/dns_spoofer_project.mp4";
 // import shell_reverse_dll_video from "../../../assets/shell_reverse_dll/shell_reverse_dll_video.mp4";
+import orbit_planner_video from "../../../assets/orbit_planner/orbit_planner_video.mp4";
 
 type Project = {
   id: number;
@@ -71,6 +73,34 @@ export default function Projects() {
       },
       {
         id: 2,
+        title: "Orbit Planner",
+        category: "Full Stack Development",
+        description:
+          "Smart workspace platform to organise trips, books, movies, schedules and personal memories with AI-powered assistance and social interaction.",
+        longDescription:
+          "Orbit Planner is a modern full stack productivity platform developed to centralise personal organisation in a single intelligent workspace. Users can create custom spaces for travel planning, books, movies, fitness, work and personal goals while managing events through an interactive calendar system.\n\nThe application also includes a social feed where users can share posts, images and personal moments publicly. An integrated AI assistant provides smart suggestions for travel plans, captions, organisation and productivity ideas based on user input.\n\nThe project was built with a scalable MERN-style architecture using React for the frontend, Node.js and Express for the backend, MongoDB for data persistence and Cloudinary for cloud image storage. The interface was designed with a modern dark UI inspired by premium productivity applications, focusing on responsiveness, user experience and clean component structure.\n\nMain features include authentication with JWT, image upload system, AI assistant integration, dynamic calendar management, custom tabs/workspaces, social feed interaction and responsive dashboard layouts.",
+        techs: [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Mongoose",
+          "Redux Toolkit",
+          "Axios",
+          "Material UI",
+          "Cloudinary",
+          "JWT",
+          "OpenAI API",
+          "Vercel",
+          "Render",
+        ],
+        image: orbit_planner,
+        github: "https://github.com/maykon92/orbit-planner",
+        video: orbit_planner_video,
+        link: "https://orbit-planner-gold.vercel.app/",
+      },
+      {
+        id: 3,
         title: "Schedule System",
         category: "Full Stack Development",
         description:
@@ -89,10 +119,10 @@ export default function Projects() {
         image: schedule1,
         github: "https://github.com/maykon92/schedule",
         video: schedule_video,
-        link: "https://schedule-silk-beta.vercel.app/",
+        // link: "https://schedule-silk-beta.vercel.app/",
       },
       {
-        id: 3,
+        id: 4,
         title: "Movies Library",
         category: "Frontend Development",
         description:
@@ -106,7 +136,7 @@ export default function Projects() {
         link: "https://movies-lib-roan-alpha.vercel.app/",
       },
       {
-        id: 4,
+        id: 5,
         title: "Secret Word",
         category: "Frontend Development",
         description:
@@ -120,7 +150,7 @@ export default function Projects() {
         link: "https://secret-words-psi.vercel.app/",
       },
       {
-        id: 5,
+        id: 6,
         title: "DNS Spoofing Lab",
         category: "Cyber Security",
         description:
@@ -133,7 +163,7 @@ export default function Projects() {
         video: dns_spoofer_project_video,
       },
       {
-        id: 6,
+        id: 7,
         title: "Chrome Loot Project",
         category: "Cyber Security",
         description:
@@ -146,7 +176,7 @@ export default function Projects() {
         video: chrome_dark_video,
       },
       {
-        id: 7,
+        id: 8,
         title: "Pentest Toolkit",
         category: "Cyber Security",
         description:
@@ -159,7 +189,7 @@ export default function Projects() {
         video: pentest_toolkit_video,
       },
       {
-        id: 8,
+        id: 9,
         title: "Shell Reverse DLL",
         category: "Cyber Security",
         description:
