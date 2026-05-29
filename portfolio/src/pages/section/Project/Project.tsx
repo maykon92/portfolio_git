@@ -26,19 +26,19 @@ import LinkIcon from "@mui/icons-material/Link";
 import schedule1 from "../../../assets/schedule/schedule.png";
 import portfolio1 from "../../../assets/portfolio/portfolio.png";
 import movies_lib from "../../../assets/movies_library/movies_library.png";
-import chrome_loot from "../../../assets/chrome_loot_project/chrome_loot_project.png";
-import dns_spoofer from "../../../assets/dns_spoofing_lab/dns_spoofing_lab.png";
+// import chrome_loot from "../../../assets/chrome_loot_project/chrome_loot_project.png";
+// import dns_spoofer from "../../../assets/dns_spoofing_lab/dns_spoofing_lab.png";
 import secret_word from "../../../assets/secret_word/secret_word.png";
-import pentest_toolkit from "../../../assets/pentest_toolkit/pentest_toolkit.png";
-import shell_reverse_dll from "../../../assets/shell_reverse_dll/shell_reverse_dll.png";
+// import pentest_toolkit from "../../../assets/pentest_toolkit/pentest_toolkit.png";
+// import shell_reverse_dll from "../../../assets/shell_reverse_dll/shell_reverse_dll.png";
 import orbit_planner from "../../../assets/orbit_planner/orbit_planner.png";
 
 import schedule_video from "../../../assets/schedule/schedule.mp4";
 import movies_lib_video from "../../../assets/movies_library/movies_lib_video.mp4";
-import chrome_dark_video from "../../../assets/chrome_loot_project/chrome_dark_theme.mp4";
+// import chrome_dark_video from "../../../assets/chrome_loot_project/chrome_dark_theme.mp4";
 import secret_word_video from "../../../assets/secret_word/secret_word_video.mp4";
-import pentest_toolkit_video from "../../../assets/pentest_toolkit/pentest_toolkit_video.mp4";
-import dns_spoofer_project_video from "../../../assets/dns_spoofing_lab/dns_spoofer_project.mp4";
+// import pentest_toolkit_video from "../../../assets/pentest_toolkit/pentest_toolkit_video.mp4";
+// import dns_spoofer_project_video from "../../../assets/dns_spoofing_lab/dns_spoofer_project.mp4";
 // import shell_reverse_dll_video from "../../../assets/shell_reverse_dll/shell_reverse_dll_video.mp4";
 import orbit_planner_video from "../../../assets/orbit_planner/orbit_planner_video.mp4";
 
@@ -149,69 +149,69 @@ export default function Projects() {
         video: secret_word_video,
         link: "https://secret-words-psi.vercel.app/",
       },
-      {
-        id: 6,
-        title: "DNS Spoofing Lab",
-        category: "Cyber Security",
-        description:
-          "Controlled lab project demonstrating DNS spoofing concepts in a safe environment for educational purposes.",
-        longDescription:
-          "This cybersecurity lab project was developed in a controlled environment to study how DNS spoofing works, how traffic can be redirected and which indicators can reveal malicious behavior. The project helps demonstrate both offensive concepts and defensive awareness in a practical and ethical learning scenario.",
-        techs: ["Python", "Flask", "Kali Linux", "Networking"],
-        image: dns_spoofer,
-        github: "https://github.com/maykon92/dns_spoofer_project",
-        video: dns_spoofer_project_video,
-      },
-      {
-        id: 7,
-        title: "Chrome Loot Project",
-        category: "Cyber Security",
-        description:
-          "Educational proof-of-concept developed in a controlled lab environment to demonstrate how social engineering can be used to expose sensitive browser data.",
-        longDescription:
-          "This project was created for educational purposes in a fully controlled lab environment to demonstrate how deceptive execution flows can lead to browser data exposure. The focus is on understanding the risk, the attack flow and the importance of defensive awareness rather than real-world misuse.",
-        techs: ["C#", ".NET", "Flask", "Windows Lab", "Python"],
-        image: chrome_loot,
-        github: "https://github.com/maykon92/chrome_loot_project",
-        video: chrome_dark_video,
-      },
-      {
-        id: 8,
-        title: "Pentest Toolkit",
-        category: "Cyber Security",
-        description:
-          "Educational cybersecurity toolkit developed in Python for hands-on learning in controlled lab environments.",
-        longDescription:
-          "This project was built to support practical cybersecurity learning through a structured Python toolkit. It includes modules related to reconnaissance, service inspection and controlled educational simulations, with an emphasis on ethical use, technical understanding and organized project structure.",
-        techs: ["Python", "CLI", "Sockets", "Flask", "Security Testing"],
-        image: pentest_toolkit,
-        github: "https://github.com/maykon92/pentest_toolkit/",
-        video: pentest_toolkit_video,
-      },
-      {
-        id: 9,
-        title: "Shell Reverse DLL",
-        category: "Cyber Security",
-        description:
-          "A complete post-exploitation Command & Control (C2) framework for Windows environments, featuring a reverse shell DLL payload, an encrypted agent, and a real-time web dashboard for multi-session management.",
-        longDescription:
-          "This framework enables authorized security professionals to assess Windows environments through a custom reverse shell DLL payload. How it works: The DLL, compiled with MinGW-w64, connects back to a Flask-based C2 server when executed on a Windows machine. The operator controls all compromised hosts through an intuitive web dashboard. Purpose: Exclusively for authorized penetration testing, red team exercises, and cybersecurity education. Not intended for illegal use.",
-        techs: [
-          "C",
-          "Python",
-          "HTML/CSS/JS",
-          "Flask",
-          "SQLite",
-          "WinSock2",
-          "RSA",
-          "AES-256",
-          "MinGW-w64",
-          "PyInstaller"
-        ],
-        image: shell_reverse_dll,
-        github: "https://github.com/maykon92/shell_reverse_dll",
-        // video: shell_reverse_dll_video,
-      },
+      // {
+      //   id: 6,
+      //   title: "DNS Spoofing Lab",
+      //   category: "Cyber Security",
+      //   description:
+      //     "Controlled lab project demonstrating DNS spoofing concepts in a safe environment for educational purposes.",
+      //   longDescription:
+      //     "This cybersecurity lab project was developed in a controlled environment to study how DNS spoofing works, how traffic can be redirected and which indicators can reveal malicious behavior. The project helps demonstrate both offensive concepts and defensive awareness in a practical and ethical learning scenario.",
+      //   techs: ["Python", "Flask", "Kali Linux", "Networking"],
+      //   image: dns_spoofer,
+      //   github: "https://github.com/maykon92/dns_spoofer_project",
+      //   video: dns_spoofer_project_video,
+      // },
+      // {
+      //   id: 7,
+      //   title: "Chrome Loot Project",
+      //   category: "Cyber Security",
+      //   description:
+      //     "Educational proof-of-concept developed in a controlled lab environment to demonstrate how social engineering can be used to expose sensitive browser data.",
+      //   longDescription:
+      //     "This project was created for educational purposes in a fully controlled lab environment to demonstrate how deceptive execution flows can lead to browser data exposure. The focus is on understanding the risk, the attack flow and the importance of defensive awareness rather than real-world misuse.",
+      //   techs: ["C#", ".NET", "Flask", "Windows Lab", "Python"],
+      //   image: chrome_loot,
+      //   github: "https://github.com/maykon92/chrome_loot_project",
+      //   video: chrome_dark_video,
+      // },
+      // {
+      //   id: 8,
+      //   title: "Pentest Toolkit",
+      //   category: "Cyber Security",
+      //   description:
+      //     "Educational cybersecurity toolkit developed in Python for hands-on learning in controlled lab environments.",
+      //   longDescription:
+      //     "This project was built to support practical cybersecurity learning through a structured Python toolkit. It includes modules related to reconnaissance, service inspection and controlled educational simulations, with an emphasis on ethical use, technical understanding and organized project structure.",
+      //   techs: ["Python", "CLI", "Sockets", "Flask", "Security Testing"],
+      //   image: pentest_toolkit,
+      //   github: "https://github.com/maykon92/pentest_toolkit/",
+      //   video: pentest_toolkit_video,
+      // },
+      // {
+      //   id: 9,
+      //   title: "Shell Reverse DLL",
+      //   category: "Cyber Security",
+      //   description:
+      //     "A complete post-exploitation Command & Control (C2) framework for Windows environments, featuring a reverse shell DLL payload, an encrypted agent, and a real-time web dashboard for multi-session management.",
+      //   longDescription:
+      //     "This framework enables authorized security professionals to assess Windows environments through a custom reverse shell DLL payload. How it works: The DLL, compiled with MinGW-w64, connects back to a Flask-based C2 server when executed on a Windows machine. The operator controls all compromised hosts through an intuitive web dashboard. Purpose: Exclusively for authorized penetration testing, red team exercises, and cybersecurity education. Not intended for illegal use.",
+      //   techs: [
+      //     "C",
+      //     "Python",
+      //     "HTML/CSS/JS",
+      //     "Flask",
+      //     "SQLite",
+      //     "WinSock2",
+      //     "RSA",
+      //     "AES-256",
+      //     "MinGW-w64",
+      //     "PyInstaller"
+      //   ],
+      //   image: shell_reverse_dll,
+      //   github: "https://github.com/maykon92/shell_reverse_dll",
+      //   // video: shell_reverse_dll_video,
+      // },
     ],
     []
   );
