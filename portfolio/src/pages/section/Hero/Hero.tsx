@@ -76,7 +76,7 @@ const Hero = () => {
                   variant="outlined"
                   startIcon={<DownloadIcon />}
                   component="a"
-                  href="/Maykon_Da_Luz_CV.pdf"
+                  href="/MaykonDaLuz_CV.pdf"
                   download
                   sx={{
                     width: "100%",
