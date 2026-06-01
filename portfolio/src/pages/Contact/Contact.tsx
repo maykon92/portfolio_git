@@ -1,11 +1,13 @@
-import { Box, Container, TextField, Typography, Button } from "@mui/material";
+import { Box, Container, TextField, Typography, Button, Snackbar, Alert } from "@mui/material";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [sending, setSending] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">("success");
   const service_id = import.meta.env.VITE_SERVICE_ID;
   const template_id = import.meta.env.VITE_TEMPLATE_ID;
   const public_key = import.meta.env.VITE_PUBLIC_KEY;
@@ -26,12 +28,16 @@ const Contact = () => {
         formRef.current,
         public_key
       );
-
-      alert("Message sent successfully!");
+      
+      setSnackbarMessage("Message sent successfully!");
+      setSnackbarSeverity("success");
+      setSnackbarOpen(true);
       formRef.current.reset();
     } catch (error) {
       console.error(error);
-      alert("Something went wrong. Please try again.");
+      setSnackbarMessage("Failed to send message. Please try again.");
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
     } finally {
       setSending(false);
     }
@@ -102,6 +108,11 @@ const Contact = () => {
           {sending ? "Sending..." : "Send Message"}
         </Button>
       </Box>
+      <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={() => setSnackbarOpen(false)}>
+        <Alert onClose={() => setSnackbarOpen(false)} severity={snackbarSeverity} sx={{ width: "100%" }}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </Container>
   );
 };
